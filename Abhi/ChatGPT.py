@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-session_token = os.getenv("SESSION_TOKEN")
+session_token = os.getenv("SESSION_TOKEN", "8095096286:AAGtId-d51HL7ezrDnqffKeQ4WF9ONEMieI")
 
 if sys.version_info >= (3, 8) and sys.platform.lower().startswith("win"):
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
