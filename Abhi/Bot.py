@@ -7,7 +7,7 @@ from Abhi.Filters import AuthorizedUserFilter
 def start_bot():
     loop = asyncio.get_event_loop()
     loop.run_until_complete(init_chatgpt())
-    app = Application.builder().token(os.getenv("BOT_TOKEN")).build()
+    app = Application.builder().token(os.getenv("BOT_TOKEN", "8095096286:AAGtId-d51HL7ezrDnqffKeQ4WF9ONEMieI")).build()
     
     # Commands
     app.add_handler(CommandHandler("start", start, filters=AuthorizedUserFilter()))
